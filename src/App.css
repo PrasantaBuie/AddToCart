@@ -1,38 +1,114 @@
-.App {
-  text-align: center;
-}
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+body {
+  font-size: 13px;
+  font-weight: 400;
+  color: #29a3d3;
+  line-height: 1.3;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h4 {
+  margin-top: 0;
+  margin-bottom: 20px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.containers {
   display: flex;
+  width: 50%;
+  height: 90vh;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  align-items: center;
+  float: left;
+}
+.subtotal {
+  display: flex;
+ width: 20%;
+ height: 90vh;
+ color: red;
+ 
+  flex-direction:column;
+  justify-content:center;
+  align-items: center;
+ 
+  float: left;
+}
+
+.quantity {
+  display: flex;
+  align-items: center !important;
+  justify-content: center;
+  padding: 0;
+  border: 5px solid black;
+  border-radius: 5px;
+}
+.quantity__minus,
+.quantity__plus {
+  display: block;
+  width: 20px;
+  height: 15px;
+  margin: 0;
+  padding-top:3px ;
+
+  text-decoration: none;
+  text-align: center;
+  line-height: 3px;
+  font-size: 20px ;
+  cursor: pointer;
+  
+}
+
+.quantity__plus:hover {
+  background: #0bd448;
+  color: #fff;
+}
+.quantity__minus:hover{
+  background-color: rgb(247, 34, 34);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.quantity__minus {
+  border-radius: 3px 0 0 3px;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.quantity__plus {
+  border-radius: 0 3px 3px 0;
+}
+.quantity__input {
+  width: 30px;
+  height:18px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  border-top: 2px solid #dee0ee;
+  border-bottom: 2px solid #dee0ee;
+  border-left: 1px solid #dee0ee;
+  border-right: 2px solid #dee0ee;
+  background: #fff;
+  color: #8194a1;
+  font-size: 12px;
+}
+.quantity__minus:link,
+.quantity__plus:link {
+  color: #7801ff;
+}
+.quantity__minus:visited,
+.quantity__plus:visited {
+  color: #fff;
+}
+.items{
+  color: #0bd448;
+}
+.price{
+  color: rgb(0, 0, 0);
+}
+@media (max-width:768px){
+  .containers{
+    width: 100%;
+    height: 50%;
   }
-  to {
-    transform: rotate(360deg);
+  .subtotal{
+    width: 100%;
+    height: 50%;
+    margin-top: 50px;
   }
+}
+.prev{
+  text-decoration-line: line-through; 
+  color: red;
 }
